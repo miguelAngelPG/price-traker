@@ -1,10 +1,12 @@
+import HeroCarousel from "@/components/HeroCarousel";
+import Searchbar from "@/components/Searchbar";
 import Image from "next/image";
 
 export default function Home() {
     return (
         <>
-            <section className='px-6 md:px-20 py-24 border-2 border-red-500'>
-                <div className="flex max-xl:flex-col">
+            <section className='px-6 md:px-20 py-24'>
+                <div className="flex max-xl:flex-col gap-16">
                     <div className="flex flex-col justify-center">
                         <p className="small-text">
                             Smart Shopping Starts Here:
@@ -25,10 +27,10 @@ export default function Home() {
                             Powerful, self-serve product and growth analytics to help you convert, engage, and retain more.
                         </p>
 
-                        Searchbar
+                        <Searchbar/>
                     </div>
 
-                    HeroCrousel
+                    <HeroCarousel/>
                 </div>
             </section>
 
