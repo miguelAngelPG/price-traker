@@ -51,7 +51,7 @@ export async function scrapeAmazonProduct(productUrl: string) {
         const imageUrls = Object.keys(JSON.parse(images))
 
         const currency = extractCurrency($('.a-price-symbol'))
-        const discountRate = $('.savingsPercentage').text().replace(/[-%]/g, '')
+        const discountRate = isNaN(Number($('.savingsPercentage').text().replace(/[-%]/g, ''))) ? 0 : $('.savingsPercentage').text().replace(/[-%]/g, '')
 
         const description = extractDescription($)
 
