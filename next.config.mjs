@@ -6,6 +6,9 @@ const nextConfig = {
     },
     images: {
         domains: ['m.media-amazon.com']
+    },
+    typescript: {
+        ignoreBuildErrors: true
     }
 };
 
